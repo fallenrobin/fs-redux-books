@@ -10,6 +10,12 @@ import * as serviceWorker from './serviceWorker';
 
 const bookList = (state = [], action) => {
   // TODO - set book list with data from server
+  if (action.type === 'SET_BOOK_LIST') {
+    return action.payload
+    //actions.payload is an array of objects from DB
+    // we don't care about the old data,
+    //so just return that array. Get rid of OLD data
+  }
   return state;
 }
 
